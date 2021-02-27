@@ -31,4 +31,15 @@ public class LogginLabTest {
             }
         }
     }
+
+    @org.junit.Test
+    public void test1(){
+        LogginLab logLab = new LogginLab();
+        logLab.setThreshold(10);
+        assertTrue(logLab.thresholdReached(11));
+        assertFalse(logLab.thresholdReached(5));
+        assertTrue(logLab.thresholdExceeds(5));
+        assertFalse(logLab.thresholdExceeds(11));
+
+    }
 }
